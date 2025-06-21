@@ -615,13 +615,13 @@ h2::before {
   z-index: 1;
 
   /* Watercolor background */
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255,255,255,0.4)),
+/*   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255,255,255,0.4)),
               url('virt.png');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   animation: fadeInSection 1.5s ease;
-}
+} */
 
 /* Reuse the fadeInSection animation */
 @keyframes fadeInSection {
