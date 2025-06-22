@@ -98,7 +98,7 @@ nav a:hover, .nav-links a:hover {
   ==
   Mobile Nav tweaks (<600px)
  ======= */
-@media (max-width: 600px){
+@media (max-width: 480px){
   nav{ flex-direction:column; align-items:center; gap:.5rem; }
   .nav-links{ flex-wrap:wrap; justify-content:center; gap:.8rem; }
   .logo{ font-size:1.3rem; }
@@ -188,7 +188,7 @@ nav a:hover, .nav-links a:hover {
 /* ==========
    Responsive Hero (≤768px)
    ============ */
-@media(max-width:768px){
+@media(max-width:480px){
   .hero{ padding:1.5rem; font-size:1rem; background-size:150%; background-attachment:scroll; }
   .hero h1{ font-size:2rem; margin-bottom:.8rem; padding:0 1rem; }
   .hero p { font-size:1rem; max-width:90vw; margin-bottom:1rem; padding:0 1.5rem; }
@@ -362,7 +362,7 @@ nav a:hover, .nav-links a:hover {
 .about>*:not(img){flex:1 1 400px;}
 
 /* ─── Mobile tweaks (≤600px) ──────────────────────────── */
-@media(max-width:600px){
+@media(max-width:480px){
   .ab-content{margin-left:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);}
   .about .ab-img{max-width:100%;min-width:unset;}
 }
@@ -691,7 +691,7 @@ h2::before {
 .cards button:hover{transform:translateY(-3px);}
 
 /* mobile tweak: stack content */
-@media(max-width:700px){
+@media(max-width:480px){
   .cards > div{flex-direction:column;text-align:left;}
   .cards > div:nth-child(even){flex-direction:column;}
 }
@@ -936,7 +936,7 @@ footer p {
 /*==============================
   MOBILE RESPONSIVE TWEAKS
 ==============================*/
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
   /* HERO Section */
   .hero h1 {
@@ -1103,7 +1103,7 @@ footer p {
 /* ───────────
    MOBILE INTERACTION ENHANCEMENTS
 ──────────── */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
   /* Turn hover tooltips (like Explore Clarity) into click-activated styles */
   .cards > div:active::after,
@@ -1198,7 +1198,7 @@ footer p {
    MOBILE-ONLY INTERACTION & ANIMATION ENHANCEMENTS
    (≤ 700 px, no hover pointer)
    ========================================================= */
-@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+@media (max-width: 480px) and (hover: none) and (pointer: coarse) {
 
   /* ─── NAV LINKS ───────────────────────────────────────── */
   .nav-links a:active,
@@ -1304,7 +1304,7 @@ footer p {
 }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 480px) {
   .hero {
     min-height: 100vh;         /* ensure full viewport height */
     position: relative;
