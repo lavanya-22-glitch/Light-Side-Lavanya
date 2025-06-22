@@ -1121,3 +1121,396 @@ footer p {
   0% { opacity: 0; transform: scale(0.8) rotate(0deg); }
   100% { opacity: 1; transform: scale(1.2) rotate(25deg); }
 }
+
+
+
+
+/*==============================
+  MOBILE RESPONSIVE TWEAKS
+==============================*/
+@media (max-width: 768px) {
+
+  /* HERO Section */
+  .hero h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* ABOUT Section */
+  .about {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  .about .ab-img {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  .ab-content {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .about h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  /* MISSION Section */
+  .mission {
+    padding: 2rem 1.5rem;
+  }
+
+  .mission h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .mission p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* VIRTUE Section */
+  .virtue {
+    padding: 2rem 1.5rem;
+  }
+
+  .cards > div {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .cards > div img {
+    position: relative;
+    max-width: 90vw;
+    max-height: 40vh;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+
+  .cards h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .cards h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .cards p {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .virtue button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* ACTION Section */
+  .action {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+
+  .action h2 {
+    font-size: 1.8rem;
+  }
+
+  .action p,
+  .action ul li {
+    font-size: 0.95rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .action .sign,
+  .action .mem {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer h3 {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.95rem;
+  }
+
+  /* NAVIGATION */
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  nav span {
+    font-size: 1.3rem;
+  }
+
+}
+
+
+/* ───────────
+   MOBILE INTERACTION ENHANCEMENTS
+──────────── */
+@media (max-width: 768px) {
+
+  /* Turn hover tooltips (like Explore Clarity) into click-activated styles */
+  .cards > div:active::after,
+  .clarity:active::after,
+  .openness:active::after,
+  .energy:active::after {
+    opacity: 1 !important;
+    transform: translate(-30%, -50%) scale(1);
+    backdrop-filter: blur(4px);
+  }
+
+  /* Simulate hover effect on image on tap */
+  .cards > div img:active {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+  }
+
+  /* Simulate shimmer on heading tap */
+  h2:active, footer h3:active {
+    animation: shimmerSoft 2s linear;
+  }
+
+  /* Buttons: simulate hover glow on tap */
+  .cards button:active,
+  .virtue button:active,
+  .action .sign:active,
+  .action .mem:active {
+    background: linear-gradient(135deg, #ffe066, #fff4c2) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(160, 120, 30, 0.2);
+    color: #2b1c08;
+  }
+
+  .cards button:active::after,
+  .virtue button:active::after,
+  .action .sign:active::after,
+  .action .mem:active::after {
+    opacity: 1;
+  }
+
+  /* Hero buttons white shimmer on tap */
+  .hero-buttons button:active::before {
+    animation: whiteShimmer 1s ease-in-out;
+  }
+
+  /* Hero blinking cursor won't be visible unless it's triggered again – optional reset */
+  .hero p::after {
+    animation: blink 1s infinite;
+  }
+
+  /* Trigger floating sparkles on tap */
+  .ab-content:active::before {
+    animation: floatSparkle 4s ease-in-out;
+  }
+
+  /* Twinkle sparkle emoji on headings */
+  h2:active::before,
+  footer h3:active::before {
+    animation: twinkle 2s ease-in-out;
+  }
+
+  /* Optional: Re-trigger any section fade on tap */
+  .about:active,
+  .mission:active,
+  .virtue:active,
+  .action:active,
+  footer:active {
+    animation: fadeInSection 1s ease;
+  }
+
+  /* Optional: re-trigger floating background */
+  .hero:active::before {
+    animation: floatBg 6s ease-in-out;
+  }
+
+  /* Optional: re-trigger background elements like .mission::after and .about::after */
+  .mission:active::after {
+    animation: floatGold 6s ease-in-out;
+  }
+
+  .about:active::after {
+    animation: floatDots 10s ease-in-out;
+  }
+
+  .gold-bubbles span:active {
+    animation: floatBubble 8s ease-in-out;
+  }
+}
+
+
+/* =========================================================
+   MOBILE-ONLY INTERACTION & ANIMATION ENHANCEMENTS
+   (≤ 700 px, no hover pointer)
+   ========================================================= */
+@media (max-width: 768px) and (hover: none) and (pointer: coarse) {
+
+  /* ─── NAV LINKS ───────────────────────────────────────── */
+  .nav-links a:active,
+  .nav-links a:focus-visible {
+    color: #5aa !important;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #38cbd1aa, 0 0 20px #f7efa8aa;
+  }
+  /* underline fill on tap */
+  .underline-center:active::after,
+  .underline-center:focus-visible::after {
+    width: 100% !important;
+  }
+
+  /* ─── HEADINGS (shimmer + sparkle) ───────────────────── */
+  h2, footer h3 {
+    animation: shimmerSoft 5s linear infinite;
+  }
+  h2::before, footer h3::before {            /* sparkle emoji */
+    animation: twinkle 2s ease-in-out infinite alternate;
+  }
+  /* tap = short re-sparkle burst */
+  h2:active, footer h3:active      { animation: shimmerSoft 2s linear; }
+  h2:active::before,
+  footer h3:active::before         { animation: twinkle 1s ease-in-out; }
+
+  /* ─── HERO & ACTION BUTTONS (white shimmer) ─────────── */
+  .hero-buttons button:active::before,
+  .action .sign:active::before,
+  .action .mem:active::before {
+    animation: whiteShimmer 1s forwards;
+  }
+  .hero-buttons button:active,
+  .action .sign:active,
+  .action .mem:active {
+    transform: translateY(-3px);
+    box-shadow: 0 0 24px rgba(255,255,255,.4),
+                0 0 10px #38cbd1aa,
+                0 0 20px #f7efa8aa;
+  }
+
+  /* ─── VIRTUE / CARD CTA BUTTONS ─────────────────────── */
+  .virtue button:active,
+  .cards button:active {
+    background: linear-gradient(135deg,#ffe066,#fff4c2) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(160,120,30,.2);
+    color: #2b1c08;
+  }
+  .virtue button:active::after,
+  .cards button:active::after { opacity: 1; }
+
+  /* ─── CARD IMAGE TOOL-TIP (tap to reveal) ───────────── */
+  .cards > div:active::after,
+  .cards > div:focus-within::after {
+    opacity: 1 !important;
+    transform: translate(-30%, -50%) scale(1) !important;
+    backdrop-filter: blur(4px);
+  }
+  .cards > div img:active { transform: scale(1.05); }
+
+  /* ─── SECTION-LEVEL ANIMATIONS RE-TRIGGER ON TAP ────── */
+  .hero:active::before        { animation: floatBg 6s ease-in-out; }
+  .gold-bubbles span:active   { animation: floatBubble 8s ease-in-out; }
+  .about:active::after        { animation: floatDots 10s ease-in-out; }
+  .mission:active::after      { animation: floatGold 8s ease-in-out; }
+  .ab-content:active::before  { animation: floatSparkle 4s ease-in-out; }
+
+  /* ─── PERFORMANCE HINTS ─────────────────────────────── */
+  .nav-links a,
+  button,
+  .cards > div { will-change: transform, opacity; }
+
+
+  /* To position the message below the image: */
+.cards > div::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  bottom: 1vh;
+  left: 50%;
+  transform: translateX(-80%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  opacity: 0;
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.6s ease-in-out,
+    backdrop-filter 0.4s ease-in-out;
+  white-space: nowrap;
+  pointer-events: none;
+  backdrop-filter: blur(0px);
+  z-index: 10;
+}
+
+.cards > div:hover::after {
+  opacity: 1;
+  transform: translateX(-50%);
+  backdrop-filter: blur(4px);
+}
+}
+
+@media(max-width: 768px) {
+  .hero {
+    min-height: 100vh;         /* ensure full viewport height */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;              /* make sure it spans full height */
+    background-size: cover;    /* keep cover fit */
+    background-position: center;
+    animation: floatBg 12s ease-in-out infinite;
+    z-index: -1;
+  }
+}
